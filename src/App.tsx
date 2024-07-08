@@ -1,11 +1,16 @@
 import './App.css'
+import Box from './components/Box.js'
 
 function App() {
 
   return (
-    <h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+    <div className="flex justify-center items-center h-screen">
+      <div>
+      {Array.from({length: 5}).map((_, index)=>(
+        <Box key={index}/>
+    ))}
+      </div>
+    </div>
   )
 }
 
